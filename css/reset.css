@@ -8,10 +8,23 @@
 	src: url('../font/Canela-Regular-Trial.otf') format('opentype');
 }
 @font-face {
+	font-family: 'Canela';
+	font-style: normal;
+	font-weight: bold;
+	src: url('../font/Canela-Bold-Trial.otf') format('opentype');
+}
+@font-face {
 	font-family: 'Aviano Sans';
 	font-style: normal;
 	font-weight: normal;
 	src: url('../font/Aviano-Sans-Regular.otf') format('opentype');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 45 920;
+	font-style: normal;
+	font-display: swap;
+	src: local('Pretendard Variable'), url('../font/PretendardVariable.woff2') format('woff2-variations');
 }
 
 /* reset */
@@ -42,19 +55,20 @@ body {
     font-family: 'Canela', serif;
     color: #000000;
     user-select: none;
+    background-color: #F1EDE6;
 }
 
 /* 양쪽 마진 (모바일, 태블릿, 데스크톱 순) */
-#inner-wrap {
+.inner-wrap {
     margin: 0 25px;
 }
 @media screen and (min-width: 768px) {
-    #inner-wrap {
+    .inner-wrap {
         margin: 0 60px;
     }
 }
 @media screen and (min-width: 1280px) {
-    #inner-wrap {
+    .inner-wrap {
         margin: 0 100px;
     }
 }
