@@ -15,7 +15,7 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common-header.css">
-    <link rel="stylesheet" href="css/common-footer">
+    <link rel="stylesheet" href="css/common-footer.css">
     <link rel="stylesheet" href="css/main.css">
 <body>
     <div id="wrap">
@@ -96,34 +96,31 @@
         </div>
 
         <section id="event">
-            <img src="img/cover02.JPG" alt="S/S Collection">
             <span class="s-heading">CHOOSE YOUR LOOK</span>
             <p class="l-heading">Last Chance<br>S/S Collection</p>
+            <img src="img/cover02.JPG" alt="S/S Collection">
             <a href="#" class="btn-discover">Discover</a>
         </section>
         <section id="beauty-product">
             <span class="s-heading">ROUJE PARIS ' BEAUTY CALLS</span>
             <p class="l-heading">les 4 Cream Palette</p>
-            <div class="palette">
-                <div class="tab-color">
-                    <div class="signiture-c"></div>
-                    <div class="chaleur-c"></div>
-                    <div class="madame-c"></div>
-                </div>
-                <div class="tab-content">
-                    <div class="signiture">
-                        <img src="img/palette01.png" alt="Signiture">
-                        <span class="product-name">Signiture</span>
-                    </div>
-                    <div class="chaleur">
-                        <img src="img/palette02.png" alt="Chaleur">
-                        <span class="product-name">Chaleur</span>
-                    </div>
-                    <div class="madame">
-                        <img src="img/palette03.png" alt="Madame">
-                        <span class="product-name">Madame</span>
-                    </div>
-                </div>
+            <div class="tab">
+                <div class="on" data-tab="signiture"></div>
+                <div data-tab="chaleur"></div>
+                <div data-tab="madame"></div>
+            </div>
+
+            <div id="signiture" class="tabcont on">
+                <img src="img/palette01.png" alt="Signiture">
+                <span class="product-name">Signiture</span>
+            </div>
+            <div id="chaleur" class="tabcont">
+                <img src="img/palette02.png" alt="Chaleur">
+                <span class="product-name">Chaleur</span>
+            </div>
+            <div id="madame" class="tabcont">
+                <img src="img/palette03.png" alt="Madame">
+                <span class="product-name">Madame</span>
             </div>
         </section>
         <section id="new-arrival">
@@ -157,7 +154,6 @@
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
             </div>
         </section>
 
@@ -168,94 +164,108 @@
                 <div class="dot"></div>
 
                 <!-- for tablet, pc -->
-                <ul class="shopping-info">
-                    <li>
-                        <p class="info-title">Delivery</p>
-                        <span class="info-text">Worldwide delivery with DHL and UPS</span>
-                    </li>
-                    <li>
-                        <p class="info-title">Secured Payment</p>
-                        <span class="info-text">Visa, Mastercard, Amex, JCB, AliPay, Apple Pay, Paypal, Klarna Pay over time, WeChatPay</span>
-                    </li>
-                    <li>
-                        <p class="info-title">Returns</p>
-                        <span class="info-text">You have 15 days to change your mind</span>
-                    </li>
-                </ul>
+                <div class="inner-wrap">
+                    <ul class="shopping-info">
+                        <li>
+                            <p class="info-title">Delivery</p>
+                            <span class="info-text">Worldwide delivery with DHL and UPS</span>
+                        </li>
+                        <li>
+                            <p class="info-title">Secured Payment</p>
+                            <span class="info-text">Visa, Mastercard, Amex, JCB, AliPay, Apple Pay,<br>Paypal, Klarna Pay over time, WeChatPay</span>
+                        </li>
+                        <li>
+                            <p class="info-title">Returns</p>
+                            <span class="info-text">You have 15 days to change your mind</span>
+                        </li>
+                    </ul>
+                </div>
 
                 <!-- for mobile -->
                 <div class="swiper infoSwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                         <p class="info-title">Delivery</p>
-                        <span class="info-text">Worldwide delivery with DHL and UPS</span>
+                        <span class="info-text">Worldwide delivery<br>with DHL and UPS</span>
                         </div>
                         <div class="swiper-slide">
                         <p class="info-title">Secured Payment</p>
-                        <span class="info-text">Visa, Mastercard, Amex, JCB, AliPay, Apple Pay, Paypal, Klarna Pay over time, WeChatPay</span>
+                        <span class="info-text">Visa, Mastercard, Amex, JCB, AliPay, Apple Pay,<br>Paypal, Klarna Pay over time, WeChatPay</span>
                         </div>
                         <div class="swiper-slide">
                         <p class="info-title">Returns</p>
-                        <span class="info-text">You have 15 days to change your mind</span>
+                        <span class="info-text">You have 15 days<br>to change your mind</span>
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
                     </div>
 
                 <div class="subscription">
-                    <h3>MORE ROUJE, LATE UPDATE THIS WAY</h3>
+                    <div class="animated-title">
+                        <div class="track">
+                            <h3>&nbsp;MORE ROUJE, LATE UPDATE THIS WAY&nbsp;MORE ROUJE, LATE UPDATE THIS WAY&nbsp;MORE ROUJE, LATE UPDATE THIS WAY&nbsp;MORE ROUJE, LATE UPDATE THIS WAY&nbsp;</h3>
+                        </div>
+                    </div>
                     <p>COME LIVE #LaVieEnRouje <span>Get 10% off your first order!</span></p>
 
-                    <form action="#" method="post" id="email-form" name="email-form">
-                        <label for="userEmail"><span class="hide">email</span></label>
-                        <input type="text" id="userEmail" name="userEmail" placeholder="Your email...">
-                        <button type="button" class="btn-subscribe">SUBSCRIBE</button>
-                    </form>
+                    <div class="inner-wrap">
+                        <form action="#" method="post" id="email-form" name="email-form">
+                            <label for="userEmail"><span class="hide">email</span></label>
+                            <input type="text" id="userEmail" name="userEmail" placeholder="Your email...">
+                            <button type="button" class="btn-subscribe">SUBSCRIBE</button>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <div class="block-company">
-                    <h4 class="ft-logo"><img src="img/logo.png" alt="Rouje"></h4>
-                    <span>Rouje is the breezy Parisian attitude, the feminine chic, the retro charm. Shipping worldwide – express or standard. Secure Payment.</span>
-                </div>
-                <div class="block-help">
-                    <p class="title">HELP</p>
-                    <ul class="ft-list">
-                        <li><a href="#">Follw my order</a></li>
-                        <li><a href="#">Delivery information</a></li>
-                        <li><a href="#">Returns</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Sizeguide</a></li>
-                        <li><a href="#">The care guide</a></li>
-                        <li><a href="#">Sitemap</a></li>
-                    </ul>
-                </div>
-                <div class="block-follow">
-                    <p class="title">FOLLOW US</p>
-                    <ul class="ft-list">
-                        <li><a href="https://www.instagram.com/rouje/">Instagram</a></li>
-                        <li><a href="https://www.facebook.com/roujejeannedamas/">Facebook</a></li>
-                        <li><a href="https://www.pinterest.fr/rouje_paris/">Pinterest</a></li>
-                    </ul>
-                </div>
-                <div class="block-about">
-                    <p class="title">ABOUT</p>
-                    <ul class="ft-list">
-                        <li><a href="#">Our addresses</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">CGV</a></li>
-                        <li><a href="#">Privacy policy</a></li>
-                        <li><a href="#">Legal informations</a></li>
-                    </ul>
+                <div class="inner-wrap">
+                    <div class="block-company">
+                        <h4 class="ft-logo"><img src="img/logo.png" alt="Rouje"></h4>
+                        <span>Rouje is the breezy Parisian attitude, the feminine<br>chic, the retro charm. Shipping worldwide –<br>express or standard. Secure Payment.</span>
+                    </div>
+                    <div class="flexbox">
+                        <div class="block-company-flex">
+                            <h4 class="ft-logo"><img src="img/logo.png" alt="Rouje"></h4>
+                            <span>Rouje is the breezy Parisian attitude, the feminine<br>chic, the retro charm. Shipping worldwide –<br>express or standard. Secure Payment.</span>
+                        </div>
+                        <div class="block-help">
+                            <p class="title">HELP</p>
+                            <ul class="ft-list">
+                                <li><a href="#">Follw my order</a></li>
+                                <li><a href="#">Delivery information</a></li>
+                                <li><a href="#">Returns</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Sizeguide</a></li>
+                                <li><a href="#">The care guide</a></li>
+                                <li><a href="#">Sitemap</a></li>
+                            </ul>
+                        </div>
+                        <div class="block-follow">
+                            <p class="title">FOLLOW US</p>
+                            <ul class="ft-list">
+                                <li><a href="https://www.instagram.com/rouje/">Instagram</a></li>
+                                <li><a href="https://www.facebook.com/roujejeannedamas/">Facebook</a></li>
+                                <li><a href="https://www.pinterest.fr/rouje_paris/">Pinterest</a></li>
+                            </ul>
+                        </div>
+                        <div class="block-about">
+                            <p class="title">ABOUT</p>
+                            <ul class="ft-list">
+                                <li><a href="#">Our addresses</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">CGV</a></li>
+                                <li><a href="#">Privacy policy</a></li>
+                                <li><a href="#">Legal informations</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
             <span class="ft-brandname">Rouje Paris</span>
         </footer>
 
-        <div id="btn-top">
-            <img src="img/i_top.svg" alt="BACK TO TOP">
-        </div>
+        <button id="btn-top"><span class="hide">Back to top</span></button>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

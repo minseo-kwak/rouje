@@ -7,20 +7,16 @@ $(function(){
   });
 })
 
-//right-box 아이콘 리스트 색상
-
-
-
 //scroll animation
 window.onscroll = function(){scrollFunction()};
     function scrollFunction() {
         if(document.body.scrollTop > 290 ||
             document.documentElement.scrollTop > 290){
                 document.getElementById('navbar').style.top = '0';
-                document.getElementById('btn-top').style.bottom = '60px';
+                document.getElementById('btn-top').style.bottom = '25px';
             } else {
                 document.getElementById('navbar').style.top = '-80px';
-                document.getElementById('btn-top').style.bottom = '-100px';
+                document.getElementById('btn-top').style.bottom = '-120px';
             }
     }
 
@@ -38,11 +34,21 @@ $('#mobile-menu').on('scroll touchmove mousewheel', function(event) {
     return false;
 });
 
+// 탭메뉴
+$('.tab > div').click(function() {
+  var activeTab = $(this).attr('data-tab');
+  $('.tab > div').removeClass('on');
+  $('.tabcont').removeClass('on');
+  $(this).addClass('on');
+  $('#' + activeTab).addClass('on');
+  // $('#' + activeTab).fadeIn();
+});
+
 // new-arrival
 var slide = new Swiper(".newArrival", {
 cssMode: true,
-slidesPerView: 3,
-spaceBetween: 30,
+slidesPerView: 2.5,
+spaceBetween: 20,
 loop: true,
 navigation: {
     nextEl: ".swiper-button-next",

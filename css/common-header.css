@@ -1,7 +1,7 @@
 /* HEADER */
 /* mobile */
 header {
-    height: 80px;
+    height: 60px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -22,16 +22,16 @@ header .inner-wrap {
 }
 .left-box h1 {
     width: 80px;
-    margin-top: 24px;
+    margin-top: 16px;
     margin-left: 50px;
 }
 
 #mobile-menu {
     position: fixed;
-    top: 80px;
+    top: 60px;
     background-color: #fff;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 60px);
     z-index: 100;
     padding: 0 25px;
     display: none;
@@ -39,7 +39,7 @@ header .inner-wrap {
 
 .btn-show-menu {
     position: absolute;
-    top: 27px;
+    top: 18px;
     left: 25px;
     width: 24px;
     height: 24px;
@@ -104,7 +104,7 @@ header .inner-wrap {
     width: 25px;
     height: 25px;
     margin-left: 10px;
-    margin-top: 20px;
+    margin-top: 7px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -120,13 +120,14 @@ header .inner-wrap {
 }
 
 #navbar {
-    height: 80px;
+    height: 60px;
     position: fixed;
     width: 100%;
-    top: -80px;
+    top: -60px;
     left: 0;
     z-index: 201;
     background-color: #fff;
+    transition: top 0.5s;
 }
 #navbar .left-box .menu-categories {
     display: none;
@@ -222,27 +223,52 @@ header .inner-wrap {
     }
     .visual .menu-categories li {
         font-size: 20px;
-        margin-top: 24px;
+        margin-top: 22px;
+        transition: 0.3s;
+    }
+    .visual .menu-categories li:hover {
+        color: #fff;
     }
     .visual .menu-categories li:nth-child(3) {
         color: #A36060;
     }
+    .visual .menu-categories li:nth-child(3):hover {
+        font-style: italic;
+    }
 
+    #navbar {
+        height: 80px;
+    }
     #navbar .left-box .menu-categories {
         display: flex;
-        margin-top: 14px;
+        margin-top: 10px;
         margin-left: 50px;
         font-size: 20px;
     }
     #navbar .left-box .menu-categories li {
         margin-right: 38px;
+        transition: 0.3s;
+        width: inherit;
+        text-align: center;
+    }
+    #navbar .left-box .menu-categories li:hover {
+        font-style: italic;
+    }
+    #navbar .left-box .menu-categories li:nth-child(1) {
+        width: 66px;
+    }
+    #navbar .left-box .menu-categories li:nth-child(2) {
+        width: 100px;
     }
     #navbar .left-box .menu-categories li:nth-child(3) {
         color: #A36060;
+        width: 58px;
     }
+    #navbar .left-box .menu-categories li:nth-child(4) {
+        width: 52px;
+    }
+
     .right-box .icon-list li a {
         margin-top: 10px;
     }
 }
-
-
