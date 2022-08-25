@@ -56,6 +56,9 @@ header .inner-wrap {
     background-position: center;
 }
 
+#mobile-menu .gnb {
+    margin-top: 30px;
+}
 #mobile-menu .gnb li {
     font-size: 18px;
     padding: 16px 0;
@@ -123,7 +126,7 @@ header .inner-wrap {
     height: 60px;
     position: fixed;
     width: 100%;
-    top: -60px;
+    top: -80px;
     left: 0;
     z-index: 201;
     background-color: #fff;
